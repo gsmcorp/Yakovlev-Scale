@@ -8,7 +8,7 @@
 
   <meta name="description" content="Шкала Яковлева (Yakovlev Scale) — круговая номограмма для быстрого определения третьей стороны треугольника по углу и размерам сторон.">
 
-  <meta name="keywords" content="Шкала Яковлева, Yakovlev Scale, треугольник, номограмма, геометрия, шпаргалка, прямоугольный треугольник, triangle, nomogram, geometry, cheat sheet, right triangle, скорость расхождения, divergence speed">
+  <meta name="keywords" content="Шкала Яковлева, Yakovlev Scale, треугольник, номограмма, геометрия, шпаргалка, прямоугольный треугольник, triangle, nomogram, geometry, cheat sheet, right triangle, скорость расхождения, divergence speed, замедление времени, time dilation">
 
   <style>
     body {
@@ -56,7 +56,7 @@ Yakovlev Scale is a circular nomogram for quickly determining
 the third side of a triangle.
 </p>
 
-<h2>Принцип / Principle</h2>
+<h2>Основа / Basis</h2>
 
 <p>
 Шкала Яковлева — это удобная шпаргалка на основе классической формулы
@@ -115,7 +115,7 @@ c = (5 + 5) × 0,707 ≈ 7,07.
 <h2>2. Готовая круговая шпаргалка / Ready-made cheat sheet</h2>
 
 <img src="images/cheatsheet-ready.png"
-     alt="Готовая круговая шпаргалка — Ready-made circular cheat sheet, right triangle, скорость расхождения, divergence speed">
+     alt="Готовая круговая шпаргалка — Ready-made circular cheat sheet, right triangle, скорость расхождения, divergence speed, замедление времени, time dilation">
 
 <p>
 Рабочая таблица по шкале Яковлева, где уже ничего не нужно умножать.
@@ -187,14 +187,6 @@ side for a sum of 7 cm. For a sum of 17 cm: 17 × 0.866 ≈ 14.7, or
 The formula is exact only when a = b; for unequal sides it slightly
 underestimates.
 </p>
-
-<p>
-Автор визуального представления: Владимир Яковлев.<br>
-Yakovlev Scale visual representation: Vladimir Yakovlev.<br>
-2026
-</p>
-
-<hr>
 
 <h2>3. Прямой угол / Right angle</h2>
 
@@ -286,6 +278,66 @@ km/h. Distance after time t: d = u × t; for another speed: value × v / ring.
 speeds; for different speeds u = √(v₁² + v₂² − 2·v₁·v₂·cos γ), and using the
 ring for the average speed slightly underestimates. Works for ships, cars,
 planes and walkers — the same maths as the main scale.
+</p>
+
+<h2>5. Замедление времени / Time dilation</h2>
+
+<img src="images/cheatsheet-time-dilation.png"
+     alt="Шпаргалка: замедление времени — Time dilation cheat sheet">
+
+<p>
+Сколько отстают движущиеся часы (специальная теория относительности, только
+эффект скорости). Строка — относительная скорость u (например, скорость
+расхождения из раздела 4): от пешехода 5 км/ч до 0,999 скорости света.
+Числа — доля отставания Δt/t = 1 − √(1 − u²/c²) (при u ≪ c примерно
+u²/(2c²)), отставание за сутки и за год и лоренц-фактор γ = 1/√(1 − u²/c²).
+При малых скоростях отставание растёт как u²: для другой скорости умножьте
+значение строки на (u / u строки)².
+</p>
+
+<p>
+<b>Круг света.</b> Если sin θ = u/c, то ход часов √(1 − u²/c²) = cos θ = 1/γ:
+прямоугольный треугольник с гипотенузой c, катетом u (движение в
+пространстве) и катетом c·cos θ (движение во времени). Поэтому замедление
+времени читается по шпаргалке «Прямой угол», кольцо ② «Катет и гипотенуза»:
+r = u/c, множитель = скорость хода часов. 0,5c → θ = 30°, ход 0,866;
+0,9c → 64,2°, 0,436; 0,99c → 81,9°, 0,141; при u = c угол 90°, часы
+останавливаются.
+</p>
+
+<p>
+<b>Пример:</b> две машины 60 км/ч под 90° → u ≈ 84,9 км/ч →
+Δt/t ≈ 3,09·10⁻¹⁵ → за год ≈ 0,1 мкс.
+</p>
+
+<p class="note">
+GPS: только от скорости (3,87 км/с) часы спутника отстают ≈ 7,2 мкс/сутки,
+но гравитация (ОТО) ускоряет их ≈ 45,7 мкс/сутки, итог ≈ +38 мкс/сутки.
+Шпаргалка учитывает только эффект скорости. Около скорости света скорости
+не складываются «по кругу» (навстречу 0,9c и 0,9c дают ≈ 0,994c), поэтому
+шпаргалка на расхождение верна только при u ≪ c.
+</p>
+
+<p>
+How much a moving clock lags (special relativity, speed effect only).
+Rows = relative speed u (e.g. the divergence speed from section 4), from a
+walker at 5 km/h to 0.999c. Values: lag fraction Δt/t = 1 − √(1 − u²/c²)
+≈ u²/(2c²), lag per day and per year, Lorentz factor γ. <b>Example:</b> two
+cars at 60 km/h, 90° apart → u ≈ 84.9 km/h → about 0.1 μs per year. GPS:
+speed alone slows the satellite clock by ≈ 7.2 μs/day, gravity speeds it up
+by ≈ 45.7 μs/day, net ≈ +38 μs/day. Circle view: with sin θ = u/c the clock rate is
+cos θ = 1/γ — ring ② (leg and hypotenuse) of the right-angle sheet, r = u/c,
+multiplier = clock rate (0.5c → 30°, 0.866; 0.9c → 64.2°, 0.436;
+0.99c → 81.9°, 0.141). Near light speed, velocities add
+relativistically, so the divergence sheet is valid only for u ≪ c.
+</p>
+
+<hr>
+
+<p>
+Автор визуального представления: Владимир Яковлев.<br>
+Yakovlev Scale visual representation: Vladimir Yakovlev.<br>
+2026
 </p>
 
 </body>
